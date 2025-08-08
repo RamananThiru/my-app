@@ -1,7 +1,6 @@
-import react from "react";
-import { Form, Card, Input, Button, message } from "antd";
-import AuthSVG from "./AuthSVG";
-import "./SignUp.css";
+import React from "react";
+import { Form, Input, Button, message } from "antd";
+import AuthCard from "./AuthCard";
 
 type FieldType = {
   username?: string;
@@ -38,53 +37,50 @@ const onFinish = (values: FieldType) => {
 
 const SignUp = () => {
   return (
-    <div className="sign-up-container">
-      <Card title="Sign Up" className="sign-up-card">
-        <AuthSVG className="logo-icon" />
-        <Form
-          onFinish={onFinish}
-          autoComplete="off"
-          initialValues={{ remember: true }}
-          name="basic"
+    <AuthCard title="Sign Up">
+      <Form
+        onFinish={onFinish}
+        autoComplete="off"
+        initialValues={{ remember: true }}
+        name="signup"
+      >
+        <Form.Item
+          name="username"
+          rules={[{ required: true, message: "Please input your username!" }]}
         >
-          <Form.Item
-            name="username"
-            rules={[{ required: true, message: "Please input your username!" }]}
-          >
-            <Input placeholder="Username" />
-          </Form.Item>
+          <Input placeholder="Username" />
+        </Form.Item>
 
-          <Form.Item
-            name="password"
-            rules={[{ required: true, message: "Please input your password!" }]}
-          >
-            <Input.Password placeholder="Password" />
-          </Form.Item>
+        <Form.Item
+          name="password"
+          rules={[{ required: true, message: "Please input your password!" }]}
+        >
+          <Input.Password placeholder="Password" />
+        </Form.Item>
 
-          <Form.Item
-            name="confirmPassword"
-            rules={[
-              { required: true, message: "Please confirm your password!" },
-            ]}
-          >
-            <Input.Password placeholder="Confirm Password" />
-          </Form.Item>
+        <Form.Item
+          name="confirmPassword"
+          rules={[
+            { required: true, message: "Please confirm your password!" },
+          ]}
+        >
+          <Input.Password placeholder="Confirm Password" />
+        </Form.Item>
 
-          <div className="already-account-text">
-            Already have an account?{" "}
-            <a href="/login" className="login-link">
-              Login Now
-            </a>
-          </div>
+        <div className="already-account-text">
+          Already have an account?{" "}
+          <a href="/login" className="login-link">
+            Login Now
+          </a>
+        </div>
 
-          <Form.Item>
-            <Button type="primary" htmlType="submit" className="sign-up-button">
-              Create Account
-            </Button>
-          </Form.Item>
-        </Form>
-      </Card>
-    </div>
+        <Form.Item>
+          <Button type="primary" htmlType="submit">
+            Create Account
+          </Button>
+        </Form.Item>
+      </Form>
+    </AuthCard>
   );
 };
 

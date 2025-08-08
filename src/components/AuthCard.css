@@ -1,0 +1,126 @@
+/* Single source of truth for auth styling */
+.auth-container {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.auth-card {
+  width: 400px;
+  height: 520px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  background: linear-gradient(145deg, #ffffff, #f0f0f3);
+  border: 1px solid rgba(99, 102, 241, 0.08);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-card .ant-card-head {
+  background: transparent;
+  border-bottom: none;
+  padding: 0;
+  text-align: center;
+}
+
+.auth-card .ant-card-head-title {
+  font-size: 1.6rem;
+  color: #6366f1;
+  font-weight: 600;
+}
+
+.title-divider {
+  width: 100%;
+  height: 1px;
+  background: #f0f0f0;
+  margin: 16px 0;
+}
+
+.auth-card .ant-card-body {
+  padding: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.auth-icon {
+  display: block;
+  margin: 8px auto 16px auto;
+}
+
+/* Form styling - let Ant Design handle most of it */
+.auth-card .ant-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.auth-card .ant-form-item {
+  margin-bottom: 18px;
+}
+
+.auth-card .ant-form-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Minimal input overrides */
+.auth-card .ant-input,
+.auth-card .ant-input-password {
+  height: 40px;
+  border-radius: 6px;
+  border: 1px solid #c3cfe2;
+  background: #f5f7fa;
+  color: #213547;
+}
+
+.auth-card .ant-input:focus,
+.auth-card .ant-input-password:focus,
+.auth-card .ant-input-focused {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
+}
+
+/* Button styling */
+.auth-card .ant-btn-primary {
+  width: 100%;
+  height: 40px;
+  background: #6366f1;
+  border-color: #6366f1;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.auth-card .ant-btn-primary:hover,
+.auth-card .ant-btn-primary:focus {
+  background: #4f46e5;
+  border-color: #4f46e5;
+}
+
+/* Checkbox styling */
+.auth-card .ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #6366f1;
+  border-color: #6366f1;
+}
+
+/* Link styling */
+.auth-card a {
+  color: #6366f1;
+}
+
+/* Common text styles */
+.signup-text,
+.already-account-text {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.remember-item {
+  margin-bottom: 16px;
+}

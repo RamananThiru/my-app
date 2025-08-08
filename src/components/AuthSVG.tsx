@@ -9,19 +9,16 @@ const AuthSVG: React.FC<AuthSVGProps> = ({ className = "", style = {} }) => (
   <svg
     width="60"
     height="60"
-    viewBox="0 0 24 24"
+    viewBox="0 0 60 60"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     className={className}
     style={style}
   >
-    <path
-      d="M6 10C6 5.58172 9.58172 2 14 2C18.4183 2 22 5.58172 22 10V11C22 15.4183 18.4183 19 14 19H10C4.47715 19 0 14.5228 0 9C0 6.79086 1.79086 5 4 5H6V10Z"
-      stroke="#6366f1"
-      strokeWidth="2"
-      fill="none"
-    />
-    <circle cx="9" cy="9" r="2" fill="#6366f1" />
+    <circle cx="30" cy="30" r="28" stroke="#6366f1" strokeWidth="4" fill="#fff" />
+    <rect x="18" y="18" width="24" height="24" rx="6" fill="#c3cfe2" stroke="#6366f1" strokeWidth="2" />
+    <path d="M30 26v8" stroke="#6366f1" strokeWidth="2" strokeLinecap="round" />
+    <circle cx="30" cy="34" r="2" fill="#6366f1" />
   </svg>
 );
 

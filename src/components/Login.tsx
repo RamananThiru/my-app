@@ -1,8 +1,6 @@
 import React from "react";
-import type { FormProps } from "antd";
-import { Form, Input, Button, Card, Checkbox } from "antd";
-import AuthSVG from "./AuthSVG";
-import "./Login.css";
+import { Form, Input, Button, Checkbox } from "antd";
+import AuthCard from "./AuthCard";
 
 type FieldType = {
   username?: string;
@@ -21,12 +19,9 @@ const onFinishFailed = (errorInfo: Error) => {
 const Login: React.FC = () => {
     console.log("Login component rendered");
     return (
-    <div className="App">
-      <Card title="Login" className="login-card">
-        <AuthSVG className="login-icon" />
+      <AuthCard title="Login">
         <Form
-          name="basic"
-          className="login-form"
+          name="login"
           initialValues={{ remember: true }}
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
@@ -67,9 +62,8 @@ const Login: React.FC = () => {
             </Button>
           </Form.Item>
         </Form>
-      </Card>
-    </div>
-  );
+      </AuthCard>
+    );
 };
 
 export default Login;
