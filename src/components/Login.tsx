@@ -41,13 +41,6 @@ const Login: React.FC = () => {
             <Input.Password placeholder="Password" />
           </Form.Item>
 
-          <div className="signup-text">
-            Don't have an account?{" "}
-            <a href="/signup" className="signup-link">
-              Sign Up Now
-            </a>
-          </div>
-
           <Form.Item
             name="remember"
             valuePropName="checked"
@@ -55,6 +48,13 @@ const Login: React.FC = () => {
           >
             <Checkbox>Remember me</Checkbox>
           </Form.Item>
+
+          <div className="signup-text">
+            Don't have an account?{" "}
+            <a href="/signup" className="signup-link">
+              Sign Up Now
+            </a>
+          </div>
 
           <Form.Item>
             <Button type="primary" htmlType="submit">

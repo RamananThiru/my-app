@@ -78,6 +78,24 @@
   border: 1px solid #c3cfe2;
   background: #f5f7fa;
   color: #213547;
+  line-height: 40px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+}
+
+.auth-card .ant-input-password .ant-input {
+  line-height: 40px;
+  height: 100%;
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+.auth-card .ant-input::placeholder,
+.auth-card .ant-input-password .ant-input::placeholder {
+  line-height: 40px;
+  color: #a1a1aa;
 }
 
 .auth-card .ant-input:focus,
@@ -123,4 +141,9 @@
 
 .remember-item {
   margin-bottom: 16px;
+  text-align: center;
+}
+
+.remember-item .ant-checkbox-wrapper {
+  justify-content: center;
 }
