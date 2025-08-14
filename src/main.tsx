@@ -6,7 +6,5 @@ import 'antd/dist/reset.css' // Ant Design styles
 
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
     <App />
-  </StrictMode>,
 )

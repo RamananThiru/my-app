@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://api.example.com';
+const API_BASE_URL = 'https://www.omdbapi.com/';
 
 const backendAPI = axios.create({
     baseURL: API_BASE_URL,
